@@ -1,7 +1,27 @@
+body {
+   background: url(irija.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+ }
+
+
+ p {
+   font-size: large;
+   margin-left: auto;
+   margin-right: auto;
+   width: 40%;
+   font-family: "Georgia"
+ }
+
+
+
+
 .slide {
-    width: auto;
-    height: 100vh;
-    position: relative;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
  }
  
  #slide-02 .image-rotator {
@@ -16,7 +36,6 @@
     width: 100%;
     height: auto;
     overflow: hidden;
-    border-radius: 3px;
  }
  
  #slide-02.animate .image-rotator img:nth-child(1) {
@@ -54,6 +73,64 @@
       opacity: 0;
     }
     90%{
-       opacity: 0;
+      opacity: 0;
+   }
+    100%{
+       opacity: 1;
     }
  }
+
+#slide-01 .image-rotator {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+}
+
+#slide-01.animate .image-rotator img {
+   position: absolute;
+   width: 100%;
+   height: auto;
+   overflow: hidden;
+   width: 40%;
+   transform: translate(100%, 90%);
+}
+
+#slide-01.animate .image-rotator img:nth-child(1) {
+   animation: dog2_tail_mover 3s ease infinite 0s;
+}
+
+#slide-01.animate .image-rotator img:nth-child(2) {
+   animation: dog2_tail_mover 3s ease infinite 0.5s;
+}
+
+#slide-01.animate .image-rotator img:nth-child(3) {
+   animation: dog2_tail_mover 3s ease infinite 1s;
+}
+
+#slide-01.animate .image-rotator img:nth-child(4) {
+   animation: dog2_tail_mover 3s ease infinite 1.5s;
+}
+
+#slide-01.animate .image-rotator img:nth-child(5) {
+   animation: dog2_tail_mover 3s ease infinite 2s;
+}
+
+#slide-01.animate .image-rotator img:nth-child(6) {
+   animation: dog2_tail_mover 3s ease infinite 2.5s;
+}
+
+@keyframes dog2_tail_mover {
+   0% {
+      opacity: 1;
+   }
+   10% {
+     opacity: 1;
+   }
+   40% {
+     opacity: 0;
+   }
+   90%{
+      opacity: 0;
+   }
+}
